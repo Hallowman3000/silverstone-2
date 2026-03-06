@@ -14,7 +14,6 @@ sys.path.insert(0, '.')
 # Page config
 st.set_page_config(
     page_title="Sales Analytics Dashboard",
-    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -163,7 +162,7 @@ def get_profit_by_brand(df, top_n=10):
 # =============================================================================
 
 def main():
-    st.markdown('<h1 class="main-header">📊 Sales Analytics Dashboard</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header"> Sales Analytics Dashboard</h1>', unsafe_allow_html=True)
     
     # Sidebar Navigation
     st.sidebar.title("Navigation")
@@ -207,21 +206,21 @@ def main():
         
         with col1:
             whales = len(rfm[rfm['segment'] == 'Whales'])
-            st.metric("🐋 Whales", whales, 
+            st.metric("Whales", whales, 
                      help="Top customers - highest spenders with excellent engagement")
         
         with col2:
             at_risk = len(rfm[rfm['segment'] == 'At Risk'])
-            st.metric("⚠️ At Risk", at_risk,
+            st.metric("At Risk", at_risk,
                      help="Customers showing declining engagement")
         
         with col3:
             total_profit = df['profit'].sum()
-            st.metric("💰 Total Profit", f"KES {total_profit:,.0f}")
+            st.metric("Total Profit", f"KES {total_profit:,.0f}")
         
         with col4:
             avg_order = df['salesAmountActual'].mean()
-            st.metric("📦 Avg Order Value", f"KES {avg_order:,.0f}")
+            st.metric("Avg Order Value", f"KES {avg_order:,.0f}")
         
         st.markdown("---")
         

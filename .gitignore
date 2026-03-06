@@ -1,5 +1,5 @@
-# Sensitive Data Files - DO NOT COMMIT TO PUBLIC REPO
-*.csv
+# Data Files (included for deployment)
+# *.csv
 
 # Jupyter Notebooks (may contain embedded data)
 *.ipynb
